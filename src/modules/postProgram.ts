@@ -1,4 +1,5 @@
 import { Entity, GlobalClient } from "drupal-jsonapi-client";
+import slugify from "slugify";
 import { IProgram } from "../model";
 import Config from "./config";
 
@@ -14,7 +15,7 @@ export default async (program: IProgram) => {
     newProgram.setAttribute("title", program.title);
     newProgram.setAttribute("field_description", program.description);
     newProgram.setAttribute("field_relative_path", {
-      uri: `internal:/asu/programs/${program.code}`,
+      uri: `internal:/asu/programs/${slugify(program.code)}`,
     });
 
     const resp = await newProgram.save();

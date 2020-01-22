@@ -1,3 +1,4 @@
+import slugify from "slugify";
 import Config from "./config";
 import fetchSheet from "./fetchSheet";
 import postProgram from "./postProgram";
@@ -11,7 +12,7 @@ export default async (isDryRun: boolean) => {
   console.log(`Starting processing ${data.length} programs`);
 
   for (const item of data) {
-    console.info(`Posting program: ${item.code}`);
+    console.info(`Posting program: ${slugify(item.code)}`);
     if (!isDryRun) {
       const response = await postProgram(item);
 
