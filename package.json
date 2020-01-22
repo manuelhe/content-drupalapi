@@ -2,18 +2,18 @@
   "name": "content-drupalapi",
   "version": "1.0.0",
   "description": "Creating content programmatically with Drupal JSON API",
-  "main": "dist/app.js",
+  "main": "dist/src/app.js",
   "scripts": {
-    "start": "tsc && node dist/app.js"
+    "start": "tsc && node dist/src/app.js"
   },
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.1",
     "dotenv": "^8.2.0",
-    "drupal-jsonapi-client": "^3.1.0"
+    "drupal-jsonapi-client": "^3.1.0",
+    "google-spreadsheet": "^2.0.8"
   },
   "devDependencies": {
-    "@types/cheerio": "^0.22.15",
+    "@types/node": "^13.1.8",
     "tslint": "^5.20.1",
     "typescript": "^3.7.4"
   }
