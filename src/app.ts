@@ -1,4 +1,4 @@
-import postToDrupal from "./modules/postToDrupal";
+import processPrograms from "./modules/processPrograms";
 
 const args = process.argv.slice(2);
 const isDryRun = args.includes("dry-run");
@@ -8,7 +8,7 @@ if (isDryRun) {
 }
 
 const init = async () => {
-  await postToDrupal(isDryRun);
+  await processPrograms(isDryRun);
 };
 
 init();
