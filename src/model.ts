@@ -1,3 +1,8 @@
+export enum ParagraphType {
+  rich_text = "rich_text",
+  program_hero = "program_hero",
+}
+
 export interface IGoogleCredentials {
   client_email: string;
   private_key: string;
@@ -24,4 +29,28 @@ export interface IProgram {
   credits: string;
   program_study: string;
   next_start_date: string;
+}
+
+export interface IParagraphRichText {
+  content: string;
+  id: string;
+}
+
+export interface IParagraphProgramHero {
+  programId: string;
+  programName: string;
+}
+
+export interface IParagraph {
+  content: IParagraphProgramHero | IParagraphRichText;
+  type: ParagraphType;
+}
+
+export interface IParagraphResponse {
+  id: string;
+  attributes: {
+    drupal_internal__id: number;
+    drupal_internal__revision_id: number;
+  };
+  type: string;
 }
