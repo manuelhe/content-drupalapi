@@ -27,7 +27,7 @@ const getWorksheetByTitle = (spreadsheet: any, worksheetTitle: string): Promise<
       resolve(targetSheet);
     }),
   );
-}
+};
 
 const getRows = (worksheet: any, options = {}): Promise<any> => {
   return new Promise((resolve, reject) =>
@@ -39,7 +39,7 @@ const getRows = (worksheet: any, options = {}): Promise<any> => {
       }
     }),
   );
-}
+};
 
 const fetchData = async (spreadsheetId: string, worksheetTitle: string, credentials: IGoogleCredentials) => {
   const spreadsheet = await getSpreadsheet(spreadsheetId, credentials);
