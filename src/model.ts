@@ -22,12 +22,12 @@ export interface IProgram {
   college: string;
   startDate: string;
   image: string;
-  interestAreas: string;
-  interestAreas_2: string;
-  interestAreas_3: string;
-  interestAreas_4: string;
-  interestAreas_5: string;
-  interestAreas_6: string;
+  interestAreas1: string;
+  interestAreas2: string;
+  interestAreas3: string;
+  interestAreas4: string;
+  interestAreas5: string;
+  interestAreas6: string;
   weeksPerClass: string;
   totalClasses: string;
   credits: string;
