@@ -29,11 +29,11 @@ export default async (program: IProgram) => {
   // Program Hero
   const programHero = await postParagraph({
     content: {
-      programId: program.code,
-      programName: program.title,
+      programId: program.courseId,
+      programName: program.programName,
     },
     type: ParagraphType.program_hero,
-  });
+  }, program);
 
   if (programHero) {
     sectionsData.push({
@@ -69,10 +69,10 @@ export default async (program: IProgram) => {
   const newProgram = new Entity("node", "details_page");
 
   newProgram.setAttribute("status", true);
-  newProgram.setAttribute("title", program.title);
+  newProgram.setAttribute("title", program.programName);
   newProgram.setAttribute("field_description", program.description);
   newProgram.setAttribute("field_relative_path", {
-    uri: `internal:/asu/programs/${slugify(program.code)}`,
+    uri: `internal:/asu/programs/${slugify(program.courseId)}`,
   });
   newProgram.setRelationship("field_sections", {
     data: sectionsData,
