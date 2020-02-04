@@ -9,26 +9,29 @@ export interface IGoogleCredentials {
 }
 
 export interface IProgram {
-  code: string;
-  title: string;
-  category: string;
-  interest_areas: string;
-  interest_areas_2: string;
-  interest_areas_3: string;
-  interest_areas_4: string;
-  interest_areas_5: string;
-  interest_areas_6: string;
+  courseId: string;
+  programName: string;
+  programType: string;
   description: string;
+  interest_areas: string;
+  prerequisites: string;
   overview: string;
-  entry_requirements: string;
-  degree_requirements: string;
+  degreeRequirements: string;
   curriculum: string;
   careers: string;
-  weeks_per_class: string;
-  total_classes: string;
+  college: string;
+  startDate: string;
+  image: string;
+  interestAreas: string;
+  interestAreas_2: string;
+  interestAreas_3: string;
+  interestAreas_4: string;
+  interestAreas_5: string;
+  interestAreas_6: string;
+  weeksPerClass: string;
+  totalClasses: string;
   credits: string;
-  program_study: string;
-  next_start_date: string;
+  programStudy: string;
 }
 
 export interface IParagraphRichText {
